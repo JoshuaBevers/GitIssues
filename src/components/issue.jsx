@@ -1,11 +1,9 @@
 import React from "react";
 
-function Issue() {
-  return (
-    <div>
-      <p>It is the systematic destruction that gets me.</p>
-    </div>
-  );
-}
+const Issue = props => {
+  const { gitIssue } = props;
+  console.log("the url is", gitIssue);
+  return <div>the issue is: {}</div>;
+};
 
 export default Issue;
