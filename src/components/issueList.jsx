@@ -25,11 +25,11 @@ class IssueList extends Component {
           {this.state.Issues.length > 0 ? (
             this.state.Issues.map(issue => {
               return (
-                <ul key={issue.id}>
+                <div key={issue.id}>
                   <li>
                     <Issue gitIssue={issue} />
                   </li>
-                </ul>
+                </div>
               );
             })
           ) : (
