@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Issue from "./issue";
+import { Link, withRouter } from "react-router-dom";
 
 class IssueList extends Component {
   state = {
@@ -27,7 +28,10 @@ class IssueList extends Component {
               return (
                 <div key={issue.id}>
                   <li>
-                    <Issue gitIssue={issue} />
+                    <p>issue Title: {issue.title}</p>
+                    <Link to={`/issue/${issue.number}`}>
+                      See Issue Details.
+                    </Link>
                   </li>
                 </div>
               );
@@ -35,7 +39,6 @@ class IssueList extends Component {
           ) : (
             <p>this didnt' render</p>
           )}
-          <Issue />
         </div>
       </div>
     );
